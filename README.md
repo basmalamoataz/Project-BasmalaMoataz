@@ -1,4 +1,4 @@
-# Project-BasmalaMoataz
+# Project-1
 //I will explain first what is the importance of the code and why did i use it, below my explaination you will find the code itself.. in the end, i will write for you the whole code. Thank you.
 // EcommerceSystem class extends JFrame, making it a Swing GUI application:
 public class EcommerceSystem extends JFrame {
