@@ -1,8 +1,8 @@
 # Project-1
 //I will explain first what is the importance of the code and why did i use it, below my explaination you will find the code itself.. in the end, i will write for you the whole code. Thank you.
 // EcommerceSystem class extends JFrame, making it a Swing GUI application:
-public class EcommerceSystem extends JFrame {
-   
+
+    public class EcommerceSystem extends JFrame {
     private JTextField customerIdField;
     private JTextField customerNameField;
     private JTextField customerAddressField;
@@ -21,7 +21,7 @@ Sets default close operation to exit on close.
 Initializes all components and sets up the UI.
 Finally, makes the frame visible : */  
 
-public EcommerceSystem() {
+        public EcommerceSystem() {
         setTitle("E-Commerce System");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
