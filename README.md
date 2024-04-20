@@ -143,12 +143,13 @@ It schedules the creation of the EcommerceSystem frame on the Event Dispatch Thr
           }
  
 // The whole code:
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class EcommerceSystem extends JFrame {
+    import javax.swing.*;
+    import java.awt.*;
+    import java.awt.event.ActionEvent;
+    import java.awt.event.ActionListener;
+
+    public class EcommerceSystem extends JFrame {
     private JTextField customerIdField;
     private JTextField customerNameField;
     private JTextField customerAddressField;
