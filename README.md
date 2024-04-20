@@ -2,7 +2,7 @@
 //I will explain first what is the importance of the code and why did i use it, below my explaination you will find the code itself.. in the end, i will write for you the whole code. Thank you.
 // EcommerceSystem class extends JFrame, making it a Swing GUI application:
 public class EcommerceSystem extends JFrame {
-    // Components for the UI
+   
     private JTextField customerIdField;
     private JTextField customerNameField;
     private JTextField customerAddressField;
@@ -20,6 +20,7 @@ Sets the title.
 Sets default close operation to exit on close.
 Initializes all components and sets up the UI.
 Finally, makes the frame visible : */  
+
 public EcommerceSystem() {
         setTitle("E-Commerce System");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,6 +38,7 @@ placeOrderButton: Button to place the order.
 cartArea: Text area to display cart contents.
 orderInfoArea: Text area to display order information.
 orderIdLabel: Label to display the order ID.   */
+
 private void initializeComponents() {
         customerIdField = new JTextField();
         customerNameField = new JTextField();
@@ -48,14 +50,15 @@ private void initializeComponents() {
         orderInfoArea = new JTextArea();
         orderIdLabel = new JLabel("Order ID: N/A");
     }
+    
     /* setupUI()
 This method sets up the UI layout:
 
 Creates panels for customer info, product selection, cart display, and order info.
 Adds labels, text fields, combo box, and buttons to the panels.
 Sets up event listeners for addToCartButton and placeOrderButton. : */
-private void setupUI() {
-   
+
+        private void setupUI() {
         JPanel customerPanel = new JPanel(new GridLayout(3, 2));
         customerPanel.add(new JLabel("Customer ID:"));
         customerPanel.add(customerIdField);
@@ -94,6 +97,7 @@ This is an ActionListener implementation for the "Add to Cart" button:
 When the button is clicked, it gets the selected product from the combo box.
 Adds the selected product to the cart.
 Updates the cartArea to display the added product. : */
+
 private class AddToCartListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -103,6 +107,7 @@ private class AddToCartListener implements ActionListener {
             cartArea.append(selectedProduct.name + " added to cart.\n");
         }
     }
+    
 /* PlaceOrderListener Class
 This is an ActionListener implementation for the "Place Order" button:
 When the button is clicked, it tries to create a Customer object using the entered customer information.
@@ -111,6 +116,7 @@ Iterates through all items in the product combo box and adds them to the cart.
 Calls cart.placeOrder() to place the order and get an Order object.
 Updates the orderIdLabel and orderInfoArea with the order ID and order details.
 Catches exceptions for invalid customer ID or any other errors during order placement. */
+
 private class PlaceOrderListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -141,10 +147,11 @@ private class PlaceOrderListener implements ActionListener {
 /* main() Method
 This is the entry point of the program.
 It schedules the creation of the EcommerceSystem frame on the Event Dispatch Thread (EDT) using SwingUtilities.invokeLater().*/
+
   public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new EcommerceSystem());
     }
-} 
+ 
 // The whole code:
 import javax.swing.*;
 import java.awt.*;
