@@ -50,10 +50,8 @@ orderIdLabel: Label to display the order ID.   */
         orderInfoArea = new JTextArea();
         orderIdLabel = new JLabel("Order ID: N/A");
     }
-    
-    /* setupUI()
+     /* setupUI()
 This method sets up the UI layout:
-
 Creates panels for customer info, product selection, cart display, and order info.
 Adds labels, text fields, combo box, and buttons to the panels.
 Sets up event listeners for addToCartButton and placeOrderButton. : */
